@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'app-title',
@@ -7,11 +7,12 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 })
 export class TitleComponent implements OnInit, OnChanges {
 
+
   @Input() public title: string = 'Welcome';
 
 
   ngOnInit(): void {
-    // throw new Error('Function not implemented.');
+    console.log('It\'s begun')
   }
 
   ngOnChanges(): void {
