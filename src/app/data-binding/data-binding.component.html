@@ -2,3 +2,12 @@
 <p>{{ element }} → {{ num }}</p>
 <p> is PI 3.78? {{ num > 3.50 }}</p>
 
+<hr>
+
+<h1>Property Binding</h1>
+
+<button [disabled]="isDisabled" (click)="activate()">Click</button>
+<button [disabled]="!isDisabled" (click)="enable()">Enable</button>
+<br>
+
+<img src="https://www.w3schools.com/howto/img_avatar.png" [hidden]="isDisabled">
