@@ -11,11 +11,25 @@ export class DataBindingComponent {
 
   public isDisabled: boolean = false
 
+  public position: { x: number, y: number } = { x: 0, y: 0 }
+
   activate() {
     this.isDisabled = true
   }
 
   enable() {
     this.isDisabled = false
+  }
+
+  alertInfo(info: MouseEvent) {
+    // alert(info)
+    console.log(info)
+  }
+
+  mouseMoveTest(event: MouseEvent) {
+    // console.log(event)
+
+    this.position.x = event.offsetX
+    this.position.y = event.offsetY
   }
 }
