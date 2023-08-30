@@ -3,8 +3,23 @@
   <p>False</p>
 </ng-template>
 
-<hr>
+<hr />
 
 <h1 *ngIf="conditionClick">True</h1>
 <h1 *ngIf="!conditionClick">False</h1>
 <button (click)="clicked()">Click</button>
+
+<hr />
+
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+
+<hr />
+
+<button (click)="addToList()">Add</button> <br /><br />
+<ul>
+  <li *ngFor="let person of list; let i = index" (click)="clickEvent(i)">
+    {{ i }} {{ person.name }} • {{ person.age }}
+  </li>
+</ul>
