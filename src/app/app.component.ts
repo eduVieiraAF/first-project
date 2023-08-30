@@ -6,12 +6,12 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
     <app-title title="Eduardo" *ngIf="destroy"></app-title>
     <!-- {{value}}
     <button (click)="add()">Add</button> -->
-    <br>
-    <button (click)="destroyComponent()">Destroy component</button>
+    <!-- <br>
+    <button (click)="destroyComponent()">Destroy component</button> -->
     <router-outlet></router-outlet>
   `
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
   // public value: number = 1;
 
   // public add(): number {
@@ -43,13 +43,14 @@ export class AppComponent implements OnInit, OnDestroy {
   // ngAfterViewChecked(): void {
   //   console.log('ngAfterViewChecked')
   // }
-  ngOnDestroy(): void {
+  // ngOnDestroy(): void {
 
-  }
+  // }
 
   ngOnInit(): void {
     // setTimeout(() => {
     //   console.log("yes")
     // }, 5000)
+    
   }
 }
