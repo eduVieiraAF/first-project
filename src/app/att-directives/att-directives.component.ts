@@ -9,7 +9,13 @@ export class AttDirectivesComponent implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       this.valor = !this.valor
+
+      if (this.height == '20px') this.height = '50px'
+      else this.height = '20px'
     }, 1000)
   }
+
   valor: boolean = true
+  height: string = '20px'
+  colour: string = 'yellow'
 }
