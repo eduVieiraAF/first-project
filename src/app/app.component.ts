@@ -3,13 +3,14 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
 @Component({
   selector: 'app-root',
   template: `
-    <app-title title="Eduardo" *ngIf="destroy"></app-title>
+    <app-title title="Angular" *ngIf="destroy"></app-title>
     <!-- {{value}}
     <button (click)="add()">Add</button> -->
     <!-- <br>
     <button (click)="destroyComponent()">Destroy component</button> -->
-    <app-directives></app-directives>
+    <!-- <app-directives></app-directives> -->
     <!-- <app-data-binding></app-data-binding> -->
+    <app-att-directives></app-att-directives>
     <router-outlet></router-outlet>
   `
 })

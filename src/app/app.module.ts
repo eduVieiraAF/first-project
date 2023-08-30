@@ -7,13 +7,15 @@ import { TitleComponent } from './title/title.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
+import { AttDirectivesComponent } from './att-directives/att-directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
     DataBindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    AttDirectivesComponent
   ],
   imports: [
     BrowserModule,
