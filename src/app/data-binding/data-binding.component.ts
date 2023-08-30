@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./data-binding.component.scss']
 })
 export class DataBindingComponent {
-
+  public element: string = "Hello World!";
+  public num: number =  3.1415
 }

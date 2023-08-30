@@ -8,6 +8,7 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
     <button (click)="add()">Add</button> -->
     <!-- <br>
     <button (click)="destroyComponent()">Destroy component</button> -->
+    <app-data-binding></app-data-binding>
     <router-outlet></router-outlet>
   `
 })
@@ -51,6 +52,6 @@ export class AppComponent implements OnInit {
     // setTimeout(() => {
     //   console.log("yes")
     // }, 5000)
-    
+
   }
 }
