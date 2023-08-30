@@ -8,7 +8,8 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
     <button (click)="add()">Add</button> -->
     <!-- <br>
     <button (click)="destroyComponent()">Destroy component</button> -->
-    <app-data-binding></app-data-binding>
+    <app-directives></app-directives>
+    <!-- <app-data-binding></app-data-binding> -->
     <router-outlet></router-outlet>
   `
 })
