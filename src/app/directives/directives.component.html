@@ -23,3 +23,12 @@
     {{ i }} {{ person.name }} • {{ person.age }}
   </li>
 </ul>
+
+<hr>
+
+<input type="text" [(ngModel)]="name">
+<div [ngSwitch]="name">
+  <p *ngSwitchCase="'edu'">Edu</p>
+  <p *ngSwitchCase="'dani'">Daniel</p>
+  <p *ngSwitchCase="'sofi'">Sofia</p>
+</div>

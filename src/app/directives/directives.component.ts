@@ -13,6 +13,8 @@ export class DirectivesComponent implements OnInit {
       this.condition = !this.condition
     }, 2500)
   }
+
+  public name: string = 'edu'
   public condition: boolean = true
   public conditionClick: boolean = true
   items: string[] = ['mango', 'banana', 'pear', 'apple', 'orange', 'strawberry', 'grape']
