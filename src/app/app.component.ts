@@ -1,3 +1,4 @@
+
 import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 
 @Component({
@@ -11,7 +12,9 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
     <button (click)="destroyComponent()">Destroy component</button> -->
     <!-- <app-directives></app-directives> -->
     <!-- <app-data-binding></app-data-binding> -->
-    <app-att-directives></app-att-directives>
+    <app-input [counter]="addValue"></app-input><br>
+    <button (click)="add()">Add</button>
+    <!-- <app-att-directives></app-att-directives> -->
     <router-outlet></router-outlet>
   `
 })
@@ -21,11 +24,15 @@ export class AppComponent implements OnInit {
   // public add(): number {
   //   return this.value += 1;
   // }
-
+  public addValue: number = 10
   public destroy: boolean = true
 
   destroyComponent() {
     this.destroy = false
+  }
+
+  add() {
+    this.addValue += 1
   }
 
   constructor() {
