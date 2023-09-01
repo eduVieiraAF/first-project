@@ -12,8 +12,13 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
     <button (click)="destroyComponent()">Destroy component</button> -->
     <!-- <app-directives></app-directives> -->
     <!-- <app-data-binding></app-data-binding> -->
-    <app-input [counter]="addValue"></app-input><br>
-    <button (click)="add()">Add</button>
+    <!-- <app-input [counter]="addValue"></app-input><br> -->
+    <!-- <button (click)="add()">Add</button> -->
+    <ng-template [ngIf]="getData">
+      <h1>{{ getData.name }}</h1>
+      <h2>{{ getData.age }}</h2>
+    </ng-template>
+    <app-output (sendData)="setData($event)"></app-output>
     <!-- <app-att-directives></app-att-directives> -->
     <router-outlet></router-outlet>
   `
@@ -26,6 +31,7 @@ export class AppComponent implements OnInit {
   // }
   public addValue: number = 10
   public destroy: boolean = true
+  public getData: { name: string, age: number } | undefined
 
   destroyComponent() {
     this.destroy = false
@@ -33,6 +39,10 @@ export class AppComponent implements OnInit {
 
   add() {
     this.addValue += 1
+  }
+
+  public setData(event: { name: string, age: number }) {
+    this.getData = event
   }
 
   constructor() {
