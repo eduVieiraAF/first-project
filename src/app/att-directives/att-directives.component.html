@@ -1,4 +1,4 @@
-<ng-content select="h1"></ng-content>
+<!-- <ng-content select="h1"></ng-content>
 <div *ngIf="name != 'stop'">
   <h1 [ngClass]="{ active: valor, disabled: !valor }">NgClass</h1>
   <h1 [ngStyle]="{ height: height, 'background-color': colour }">NgStyle</h1>
@@ -19,4 +19,8 @@
 <input [(ngModel)]="name" />
 <button (click)="addToList()">ADD</button>
 
-<ng-content select="hr"></ng-content>
+<ng-content select="hr"></ng-content> -->
+
+<li *ngFor="let item of list">{{ item.name | titlecase }}</li>
+<p>{{date | date:'MMMM, dd yyyy' }}</p>
+<p>{{date | date:'fullDate' }}</p>

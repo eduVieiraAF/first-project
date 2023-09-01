@@ -25,8 +25,9 @@ export class AttDirectivesComponent implements OnInit {
   colour: string = 'yellow'
   name: string = ''
   list: Array<{ name: string }> = [
-    { name: "Eduardo" },
+    { name: "eduardo" },
     { name: "Daniel" },
     { name: "Sofia" },
   ]
+  date: Date = new Date()
 }

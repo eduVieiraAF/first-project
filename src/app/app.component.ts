@@ -10,10 +10,7 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
     <button (click)="destroyComponent()">Destroy component</button> -->
     <!-- <app-directives></app-directives> -->
     <!-- <app-data-binding></app-data-binding> -->
-    <app-att-directives>
-      <h1>Directives</h1>
-      <hr>
-    </app-att-directives>
+    <app-att-directives></app-att-directives>
     <router-outlet></router-outlet>
   `
 })
