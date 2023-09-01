@@ -8,6 +8,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { AttDirectivesComponent } from './att-directives/att-directives.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,14 @@ import { AttDirectivesComponent } from './att-directives/att-directives.componen
     TitleComponent,
     DataBindingComponent,
     DirectivesComponent,
-    AttDirectivesComponent
+    AttDirectivesComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

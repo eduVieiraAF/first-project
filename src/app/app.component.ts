@@ -4,6 +4,7 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
   selector: 'app-root',
   template: `
     <app-title title="Angular" *ngIf="destroy"></app-title>
+    <app-new-component></app-new-component>
     <!-- {{value}}
     <button (click)="add()">Add</button> -->
     <!-- <br>
