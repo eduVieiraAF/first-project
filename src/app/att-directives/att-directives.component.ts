@@ -15,7 +15,14 @@ export class AttDirectivesComponent implements OnInit {
     }, 1000)
   }
 
+  addToList() {
+    this.list.push({ name: this.name })
+    this.name = ''
+  }
+
   valor: boolean = true
   height: string = '20px'
   colour: string = 'yellow'
+  name: string = ''
+  list: Array<{ name: string }> = []
 }
