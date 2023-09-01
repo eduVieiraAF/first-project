@@ -24,5 +24,9 @@ export class AttDirectivesComponent implements OnInit {
   height: string = '20px'
   colour: string = 'yellow'
   name: string = ''
-  list: Array<{ name: string }> = []
+  list: Array<{ name: string }> = [
+    // { name: "Eduardo" },
+    // { name: "Daniel" },
+    // { name: "Sofia" },
+  ]
 }
