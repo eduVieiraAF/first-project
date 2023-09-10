@@ -8,6 +8,7 @@ import { FoodListService } from 'src/app/services/food-list.service';
 })
 export class FoodListComponent implements OnInit {
   constructor(private foodListService: FoodListService) { }
+  
   ngOnInit(): void {
     this.foodList = this.foodListService.getFoodList()
   }

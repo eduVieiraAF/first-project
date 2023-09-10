@@ -17,6 +17,11 @@ export class FoodListService {
   constructor() { }
 
   public getFoodList(): Array<string> {
-    return this.foodList
+    return this.foodList;
+  }
+
+  public foodListAdd(value: string) {
+    return this.foodList.push(value);
+
   }
 }

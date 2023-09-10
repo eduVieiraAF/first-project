@@ -21,6 +21,8 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
     <app-output (sendData)="setData($event)"></app-output> -->
     <!-- <app-att-directives></app-att-directives> -->
     <app-food-list></app-food-list>
+    <hr>
+    <app-food-add></app-food-add>
     <router-outlet></router-outlet>
   `
 })
