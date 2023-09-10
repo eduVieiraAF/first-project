@@ -13,6 +13,13 @@ export class FoodAddComponent {
 
   public addToList(value: string) {
     // console.log(value)
-    return this.foodListService.foodListAdd(value);
+    return this.foodListService.foodListAdd(value).subscribe({
+      next: (res: any) => {
+        this.foodListService.foodListAlert(value)
+        return this.foodListService.getFoodList()
+      },
+      error: (err: any) => console.log(err)
+    }
+    );
   }
 }

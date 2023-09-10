@@ -8,6 +8,8 @@ import { FoodListService } from 'src/app/services/food-list.service';
   styleUrls: ['./food-list.component.scss']
 })
 export class FoodListComponent implements OnInit {
+  public foodList: Array<FoodList> = [];
+
   constructor(private foodListService: FoodListService) { }
 
   ngOnInit(): void {
@@ -17,10 +19,22 @@ export class FoodListComponent implements OnInit {
     })
 
     this.foodListService.emitEvent.subscribe({
-      next: (res: any) => alert(`You've add a new item → ${res}`),
+      next: (res: any) => {
+        alert(`You've add a new item → ${res}`)
+        return this.foodList.push(res)
+    },
       error: (err: any) => console.log(err)
     })
   }
 
-  public foodList:FoodList | any
+  public foodListDelete(id: number) {
+    return this.foodListService.foodListDelete(id).subscribe({
+      next: (res: any) => this.foodList = this.foodList.filter(
+        item => {
+          return id !== item.id
+        }
+      ),
+      error: (err: any) => console.log(err)
+    });
+  }
 }

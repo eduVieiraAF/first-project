@@ -8,28 +8,35 @@ import { FoodList } from '../module/food-list';
 })
 export class FoodListService {
   public emitEvent = new EventEmitter();
-
-
-  private foodList: Array<string> = [];
-
+  private foodList: Array<FoodList> = [];
   private url: string = 'http://localhost:3000/'
 
   constructor(private http: HttpClient) { }
 
-  public getFoodList(): Observable<FoodList> {
+  public getFoodList(): Observable<Array<FoodList>> {
     // return this.foodList;
-    return this.http.get<FoodList>(`${this.url}food-list`)
+    return this.http.get<Array<FoodList>>(`${this.url}food-list`)
       .pipe(
         res => res,
         err => err
-        );
+      );
   }
 
-  public foodListAdd(value: string) {
-    this.foodListAlert(value);
+  public foodListAdd(value: string): Observable<Array<FoodList>> {
+    return this.http.post<Array<FoodList>>(`${this.url}food-list`, { name: value })
 
-    return this.foodList.push(value);
+
+    }
+  public foodListDelete(id: number): Observable<Array<FoodList>> {
+    return this.http.delete<Array<FoodList>>(`${this.url}food-list/${id}`)
+
   }
+
+  public foodListEdit(id: number, value: string): Observable<Array<FoodList>> {
+    return this.http.put<Array<FoodList>>(`${this.url}food-list/${id}`, { name: value })
+  }
+
+
 
   public foodListAlert(value: string) {
     return this.emitEvent.emit(value);
