@@ -14,12 +14,13 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
     <!-- <app-data-binding></app-data-binding> -->
     <!-- <app-input [counter]="addValue"></app-input><br> -->
     <!-- <button (click)="add()">Add</button> -->
-    <ng-template [ngIf]="getData">
+    <!-- <ng-template [ngIf]="getData">
       <h1>{{ getData.name }}</h1>
       <h2>{{ getData.age }}</h2>
     </ng-template>
-    <app-output (sendData)="setData($event)"></app-output>
+    <app-output (sendData)="setData($event)"></app-output> -->
     <!-- <app-att-directives></app-att-directives> -->
+    <app-food-list></app-food-list>
     <router-outlet></router-outlet>
   `
 })
