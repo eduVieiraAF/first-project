@@ -12,9 +12,10 @@ export class FoodListComponent implements OnInit {
   ngOnInit(): void {
     this.foodList = this.foodListService.getFoodList()
 
-    this.foodListService.emitEvent.subscribe((res) =>
-      alert(`You've added one item to the list: ${res}`)
-    )
+    this.foodListService.emitEvent.subscribe({
+      next: (res: any) => alert(`You've add a new item → ${res}`),
+      error: (err: any) => console.log(err)
+    })
   }
 
   public foodList: Array<string> = []
