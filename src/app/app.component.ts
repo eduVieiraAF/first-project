@@ -5,7 +5,7 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
   selector: 'app-root',
   template: `
     <app-title title="Angular" *ngIf="destroy"></app-title>
-    <app-new-component></app-new-component>
+    <!-- <app-new-component></app-new-component> -->
     <!-- {{value}}
     <button (click)="add()">Add</button> -->
     <!-- <br>
@@ -20,9 +20,10 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
     </ng-template>
     <app-output (sendData)="setData($event)"></app-output> -->
     <!-- <app-att-directives></app-att-directives> -->
-    <app-food-list></app-food-list>
+    <!-- <app-food-list></app-food-list>
     <hr>
-    <app-food-add></app-food-add>
+    <app-food-add></app-food-add> -->
+    <app-forms></app-forms>
     <router-outlet></router-outlet>
   `
 })
